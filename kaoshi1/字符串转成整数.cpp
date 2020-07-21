@@ -7,13 +7,13 @@ int main(){
         ge++;
     }
     ge++;
-    if(a[0] == '-'){
-        for(int i = 1;i<ge;i++){
-            cout << a[i];
-        }
-    }
-    else{
+    // if(a[0] == '-'){
+    //     for(int i = 1;i<ge;i++){
+    //         cout << a[i];
+    //     }
+    // }
+    // else{
         cout << a;
-    }
+    // }
 
 }
