@@ -8,12 +8,12 @@ inline bool IfBig(int a,int b){
     else if (a<b) return false;
     else return false;
 }
-inline int j(char a[100],char b[100]){
+inline int j(char a[],char b[]){
     int sum = 0;
     int ss = 0;
     if(IfBig(strlen(a),strlen(b))== true) ss = strlen(a);
     else ss=strlen(b);
-    for(int i = 0;i<=ss;i++){
+    for(int i = 0;i<ss;i++){
         if(a[i] == b[i]) ++sum;
 
     }
