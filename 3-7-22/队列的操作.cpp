@@ -9,10 +9,13 @@ int main(){
         que[back++] =i+1;
 
     }
-    //个数
-    cout << back-front << endl;
-    //对头
+    //获取队列中元素的个数
+    cout << back - front << endl;//排序通式
+    //获取队头元素的值
     cout << que[front] << endl;
+    front++;
+    //获取队列中元素的个数
+    cout << back - front << endl;
     return 0;
 }
 //cbyhd 
