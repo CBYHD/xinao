@@ -1,0 +1,13 @@
+#include<deque>
+deque<int> dq;
+dq.push_back(x);    从队列的尾部插入
+dq.push_front(x);   从队列的头部插入
+dq.pop_back();      从队尾删除
+dq.pop_front();     从队头删除
+dq.empty();         判断队列是否为空，为空返回true，否则返回false
+dq.size();          获取队列中元素的个数
+dq.front();         获取队头元素的值 
+dq.back();          获取队尾元素的值
+//         ----------------------------------------------
+//         |更多代码：github.com/cbyhd/xinao             |
+//         ----------------------------------------------

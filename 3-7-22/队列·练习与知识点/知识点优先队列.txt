@@ -1,0 +1,13 @@
+优先队列
+参考题目[https://www.luogu.com.cn/problem/P1090]P1090 合并果子 / [USACO06NOV] Fence Repair G
+
+头文件queue???
+
+priority_que<int> q;
+
+q.empty();  判断队列是否为空
+q.push();   在队尾的位置入队
+q.pop();    在队头的位置出队
+q.size();   求队列的长度
+
+#########可以倒序排序，如果想正序：priority_que<int,cmp> q;
