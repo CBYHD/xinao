@@ -1,3 +1,11 @@
+#define N 101
+#include<iostream>
+using namespace std;
+int stack[N],top;
+int main(){
+
+    return 0;
+}
 // 栈结构的功能
 // push() // 入栈
 // pop() // 出栈
