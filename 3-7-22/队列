@@ -1,0 +1,8 @@
+#include<queue>
+queue<int> que;
+que.qush(x);    将x插入到对尾的位置
+que.pop();      从队头的位置删除元素
+que.empty();    判断队列是否为空，为空返回true，否则返回false
+que.size();     获取队列中元素的个数(队列的长度)
+que.back();     获取队尾元素的值
+que.front();    获取队头元素的值
