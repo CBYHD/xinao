@@ -10,9 +10,62 @@
    ^ 按位异或
    ` 按位取反
    (1) & 按位与 两个都为1，结果才是1
-   应用：
-      <1> 判断奇偶性   if(x&1) 奇数 else 偶数
-   (2)
+   应用：判断奇偶性   if(x&1) 奇数 else 偶数
+
+   (2) |按位或 (1个为1，结果都为1)
+   应用：给指定的位置赋值为1
+
+   (3) ^ 按位异或 (不同则为1，相同则为0)
+   应用：简单加密(对特定的数字进行取反操作)
+   //交换两个变量的值a=a^b b=a^b a=a^b 1+1 = 0 1+ 0=1 0+1=0 0+0=0
+
+   (4) ~ 按位取反 (0变1，1变0)    ~2 = -3 
+
 2.移位运算法
     << 左移
     >> 右移
+    (1) << 左移 2<<1 = 2*2 = 4    3<<1 = 3*2 = 6    1<<1 = 1*2 = 2 等价于×2 左移几位就×2的几次方  ```|____被移的数是整数
+    (2) >> 右移 4>>1 = 4/2 = 2    6>>1 = 6/2 = 3    2>>1 = 2/2 = 1 等价于÷2 右移几位就÷2的几次方  ___|
+
+3.二进制的状态压缩
+   去掉最后一位        x>>1
+   在最后一位添加0     x<<1
+   在最后一位加1       X<<1+1
+   把最后一位变成1     x|1
+   把最后一位变成0     x|0
+
+4.原码，反码，补码
+   二进制中最高位为符号为，0表示正数，1表示负数
+   正数的原码，反码，补码不变
+   负数：
+   原码--(符号位不变，其他位全部取反)-->反码(符号位不变，整个数字加1)-->补码
+
+//         ----------------------------------------------
+//         | more code: github.com/cbyhd/xinao          | 
+//         ----------------------------------------------
+/*
+Bit operation:
+1, bit logic operation
+&amp;Bitwise AND
+|Bitwise OR
+^Bitwise XOR
+`Bitwise inversion
+(1) Bitwise and both are 1, the result is 1
+Application: judge parity if (X &amp; 1) odd else even
+(2) | bitwise OR (1 is 1, the result is 1)
+Application: assign 1 to the specified position
+(3) ^ bitwise XOR (1 if different, 0 if same)
+Application: simple encryption (reverse operation of a specific number)
+//Exchange the values of two variables a = a ^ B B = a ^ B a = a ^ B 1 + 1 = 0 1 + 0 = 10 + 1 = 0 0 0 + 0 = 0
+(4) ~ bitwise inversion (0 to 1, 1 to 0) ~ 2 = - 3
+2. Shift operation
+< shift left
+>>Shift right
+(1) < left shift 2 < < 1 = 2 * 2 = 4 3 < < 1 = 3 * 2 = 6 1 < < 1 = 1 * 2 = 2   is equivalent to the power of × 2 by shifting several bits to the left```|____ The number moved is an integer
+(2) > > shift right 4 > > 1 = 4 / 2 = 2 6 > > 1 = 6 / 2 = 3 2 > > 1 = 2 / 2 = 1   is equivalent to △ 2 to the power of △ 2|
+3. Binary state compression
+Remove the last bit x > > 1
+Add 0 x < < 1 to the last bit
+Add 1 x < < 1 + 1 to the last digit
+Change the last one to 1 x|1
+Change the last bit to 0 x|0
