@@ -2,7 +2,7 @@
 #define N 50
 using namespace std;
 int e[100][100];
-int n,m,cur,sum;
+int n,m,sum;
 int book[N+1];
 void dfs(int cur){
     cout << cur << " ";
@@ -19,15 +19,29 @@ void dfs(int cur){
 int main(){
     int x,y,s;
     cin >> n >> m;
-    for(int i = 0;i<m;i++){
-        
-        cin >> x>>y;
+    for(int i = 1;i<=m;i++){
+        cin >> x >> y;
         e[x][y] = 1;//有向图只标记一个方向
     }
     cin >> s;
+    book[s] = 1;
     dfs(s);
     return 0;
 }
+
+/*
+5 8
+3 5
+4 5
+4 3
+2 3
+5 4
+4 1
+4 2
+2 4
+4
+*/
+
 //         ----------------------------------------------
 //         |更多代码：github.com/cbyhd/xinao             |
 //         ----------------------------------------------
