@@ -2,6 +2,7 @@
 //         ----------------------------------------------
 //         |更多代码：github.com/cbyhd/xinao             |
 //         ----------------------------------------------
+//版权信息：cbyhd制作   于https://github.com/CBYHD/xinao/blob/master/4-7-23/%E7%9F%A5%E8%AF%86%E7%82%B9-%E4%BD%8D%E8%BF%90%E7%AE%97.txt更新
 /*
 位运算：
 1，位逻辑运算
@@ -69,3 +70,25 @@ Add 0 x < < 1 to the last bit
 Add 1 x < < 1 + 1 to the last digit
 Change the last one to 1 x|1
 Change the last bit to 0 x|0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
