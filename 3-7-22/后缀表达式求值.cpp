@@ -6,48 +6,46 @@
 #include<cstdio>
 // #include<bits/stdc++.h>
 using namespace std;
-stack<double>s;
+stack<int>s;
 int main(){
-    char a[100][100];
+    char a[100];
     int i = 0;
-    while(cin >> a[i++]);
-    for(int j = i-1;j>=0;j--){
-        if(strcmp(a[j],"*") == 0){
-            double x = s.top();
+    while(cin >> a){
+	if(strcmp(a,"*") == 0){
+            int x = s.top();
             s.pop();
-            double y = s.top();
+            int y = s.top();
             s.pop();
             s.push(x*y);
         }
-        else if(strcmp(a[j],"/") == 0){
-            double x = s.top();
+        else if(strcmp(a,"/") == 0){
+            int x = s.top();
             s.pop();
-            double y = s.top();
+            int y = s.top();
             s.pop();
             s.push(x/y);
         }
-        else if(strcmp(a[j],"+") == 0){
-            double x = s.top();
+        else if(strcmp(a,"+") == 0){
+            int x = s.top();
             s.pop();
-            double y = s.top();
+            int y = s.top();
             s.pop();
             s.push(x+y);
         }
-        else if(strcmp(a[j],"-") == 0){
-            double x = s.top();
+        else if(strcmp(a,"-") == 0){
+            int x = s.top();
             s.pop();
-            double y = s.top();
+            int y = s.top();
             s.pop();
             s.push(x-y);
         }
         else
             
         {
-            s.push(atof(a[j]));
+            s.push(atoi(a));
         }
-        
-    }
-    printf("%.4lf",s.top());
+	}
+    cout << s.top();
     return 0;
 }
 //         ----------------------------------------------
