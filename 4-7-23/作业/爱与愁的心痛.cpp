@@ -19,3 +19,4 @@ int main()
     cout << Min;
     return 0;
 }
+// www.luogu.com.cn/blog/cbyhd/p1614-ai-yu-chou-di-xin-tong
