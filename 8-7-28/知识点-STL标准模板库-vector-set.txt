@@ -1,0 +1,93 @@
+// STL标准模板库
+// 1.STL容器
+    // vector        不定长数组
+        vector<> v     //定义vector不定长数组
+        v.push_back(x);//在尾部插入新元素x
+        v.size();      //返回v容器的大小
+        v.begin();     //返回v的起始元素
+        v.end();       //返回v的尾部元素
+        v.empty();     //v是否为空，空则返回true，反之返回false
+        v.clean();     //清空v
+        v.erase(a,b);  //删除a到b
+        cout << v[i];  //输出v的第i位
+                  迭代器
+        for(vector<int>::iterator it=v.begin();it!=v.end;it++){
+            cout << *it << endl;
+        }
+        set 集合，同一类型变量的集合，无重复元素
+        set<int> s;//定义set
+        s.inset(x);//插入元素x
+        s.erase(x);//删除元素x
+        s.count(x);//查询元素x
+        s.size();  //返回s的大小
+        s.empty(); //判断s是否为空
+        s.clean(); //清空s
+
+        multiset 集合，同一类型变量的集合，可以有重复元素
+        set<int> s;//定义set
+        s.inset(x);//插入元素x
+        s.erase(x);//删除元素x
+        s.count(x);//查询元素x
+        s.size();  //返回s的大小
+        s.empty(); //判断s是否为空
+        s.clean(); //清空s
+
+        map 映射 关键字zhi对应一个值
+        map<string,int> ma;
+        ma[13] = "lmf";
+        ma[12] = "cby";
+        ma[12] = "cyn";
+        ma.size();//返回ma的大小
+        ma.count(12);//查询12
+        ma.begin();//返回ma的起始位置
+        ma.end();//返回ma的结束位置
+        ma.empty();//判断ma是否为空
+        ma.clear();//清空ma
+
+        stack
+        stack<int> s;
+        s.push(x);//入栈
+        s.pop();//出栈
+        s.top();//获取栈顶元素的值
+        s.empty();//判断栈是否为空
+        s.size();//获取栈中元素的个数
+        s.clear(); //清空栈
+
+        queue 队列 先进先出
+        queue<int> q;
+        q.push(x); //从队尾插入
+        q.pop();   //从队头出队
+        q.front(); //获取队头元素的值
+        q.back();  //获取队尾元素的值
+        q.size();  //队列的大小
+        q.empty(); //判断队列是否为空
+        q.clear(); //清空队列
+
+        deque 双端队列 队头和队尾都可以
+        deque<int> dq;
+        dq.push_back();//从队尾插入
+        dq.push_front();//从队头插入
+        dq.pop_back(); //从队尾删除
+        dq.pop_front();//从队头删除
+        dq.front();//获取队头元素的值
+        dq.back(); //获取队尾元素的值
+        dq.size();//队列的大小
+        dq.empty();//判断队列是否为空
+        dq.clear();//清空队列
+
+        priority_queue 优先队列
+        队头元素的优先级最高，算法的实质就是一个二叉堆
+        默认大根堆
+        priority_queue<int> pq;//定义一个优先队列
+        //大根堆 从大到小排序
+        priority_queue<int,vector<int>,less<int>> dq1;
+        //小根堆 从小到大排序
+        priority_queue<int,vector<int>,greater<int>> dq2;
+        pq.top();//获取队头元素的值
+        pq.pop;//出队
+        pq.push(x);//入队
+        pq.size();//获取队列的大小
+        pq.empty();//判端队列是否为空
+
+2.STL算法
+3.STL迭代器

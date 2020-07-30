@@ -1,5 +1,5 @@
 #include<iostream>
-#define N 100
+#define N 500000
 #include<algorithm>
 int f[N+1];
 int n,m,sum,step;
@@ -18,7 +18,7 @@ void merge(int x,int y){
 }
 int main()
 {
-	cin >> n >A> m;
+	cin >> n >> m;
 	for(int i = 1;i <=n;i++) f[i] = i;
 	for(int i = 1;i <= m;i++){
 		cin >> a[i].x >> a[i].y >> a[i].z;

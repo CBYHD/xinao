@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "*.txt": "cpp"
+        "*.txt": "cpp",
+        "random": "cpp",
+        "bitset": "cpp",
+        "set": "cpp",
+        "vector": "cpp",
+        "*.tcc": "cpp"
     }
 }
