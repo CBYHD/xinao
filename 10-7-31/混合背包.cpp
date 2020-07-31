@@ -37,7 +37,7 @@ int main()
         {
             for (int j = m; j >= v; j--)
             {
-                for (int k = 1; k <= s && j >= k * v; k++)
+                for (int k = 0; k <= s && j >= k * v; k++)
                 {
                     dp[j] = max(dp[j], dp[j - k * v] + k * w);
                 }
