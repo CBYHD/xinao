@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-    freopen("1.out", w, ) for (int i = 1; i <= 7; i++)
+    // freopen("1.out", w, );
+    for (int i = 1; i <= 7; i++)
     {
         int n, m;
         cin >> n >> m;
