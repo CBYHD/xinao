@@ -1,28 +1,21 @@
 #include <iostream>
+#include <algorithm>
+#define N 100
 using namespace std;
-int n, m;
-int big, i;
-// void dfs(char v,int u,int s){//v如果为a则a数组，反之为b
-//     if(i == n){
-
-//     }
-//     for(int i = s,i < n;i++){//u是累计，s是i
-//         if(v == 'a'){
-//             dfs('a',u+1,i+1);
-//         }
-//     }
-// }
+char a[N + 1], b[N + 1];
+int n, m, e[N + 1][N + 1];
 int main()
 {
-    int a[1000], b[1000];
-    cin >> n >> m;
+    cin >> n >> m >> a + 1 >> b + 1;
     for (int i = 1; i <= n; i++)
-        cin >> a[i];
-    for (int i = 1; i <= m; i++)
-        cin >> b[i];
-
+    {
+        for (int j = 1; j <= m; j++)
+        {
+            e[i][j] = max(e[i - 1][j], e[i][j - 1]);
+            if (a[i] == b[j])
+                e[i][j] = max(e[i][j], e[i - 1][j - 1] + 1);
+        }
+    }
+    cout << e[n][m] << endl;
     return 0;
 }
-//         ----------------------------------------------
-//         |更多代码：github.com/cbyhd/xinao             |
-//         ----------------------------------------------
