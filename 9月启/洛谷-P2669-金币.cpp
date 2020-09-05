@@ -1,13 +1,10 @@
 #include <iostream>
 using namespace std;
-int n, q, ts[1000];
+
 int main()
 {
-    cin >> n >> q;
+    cin >> n;
     for (int i = 1; i <= n; i++)
     {
-        cin >> ts[i];
     }
-
-    return 0;
 }
