@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
-char a[1000];
+char a[10000];
 int sum = 0;
 int main()
 {
-    cin.getline(a, 1000);
-    for (int i = 1; i <= strlen(a); i++)
+    cin >> a;
+    for (int i = 0; i < strlen(a); i++)
     {
         if (a[i] == '1')
         {
