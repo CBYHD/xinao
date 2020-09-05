@@ -11,7 +11,7 @@ bool isPrime(int n)
     }
     return true;
 }
-void cbyhd(int x)
+void fe(int x)
 {
     for (int i = x; i <= n; i++)
     {
@@ -28,10 +28,7 @@ int main()
     for (int i = m; i <= n; i++)
     {
         if (isPrime(i))
-            cbyhd(i);
+            fe(i);
     }
     return 0;
 }
-//         ----------------------------------------------
-//         |更多代码：github.com/cbyhd/xinao             |
-//         ----------------------------------------------
