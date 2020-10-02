@@ -1,38 +1,39 @@
-#include <cstdio>
 #include <iostream>
+#define N 1000100
 using namespace std;
-
-struct laoba
+struct people
 {
-    int tm, ct;
-} a[300005];
-int b[100005];
-int n, k, tot, time, i, j, tmp;
-int ans, head;
+    int t, x;
+} a[N];
+int num[N];
 int main()
 {
+    int n, t, k, x, p = 0, q = 0, ans = 0;
     cin >> n;
-    for (i = 1; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        cin >> time >> k;
-        while (k--)
+        cin >> t >> k;
+        for (int j = 1; j <= k; j++)
         {
-            cin >> tmp;
-            a[++tot].tm = time;
-            a[tot].ct = tmp;
-            if (b[tmp] == 0)
+            cin >> x;
+            a[q++] = {t, x};
+            num[x]++;
+            if (num[x] == 1)
+            {
                 ans++;
-            b[tmp]++;
+            }
         }
-        while (time - a[head].tm >= 86400)
+        while (a[p].t <= t - 86400)
         {
-            tmp = a[head].ct;
-            b[tmp]--;
-            if (b[tmp] == 0)
+            num[a[p].x]--;
+            if (num[a[p].x] == 0)
+            {
                 ans--;
-            head = head + 1;
+            }
+            p++;
         }
         cout << ans << endl;
+
+        return 0;
     }
-    return 0;
 }
