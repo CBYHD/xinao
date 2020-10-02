@@ -13,7 +13,6 @@ int main()
     ans = m + int(sum * 1.0 / k + 0.5 * (sum > 0 ? 1 : -1));
     if (ans > n)
         ans = n;
-        se
     if (ans < 1)
         ans = 1;
     printf("%lld", ans);

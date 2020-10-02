@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#define N 100000
+#define N 200000
 int a[N], w[N], pre[N], cnt[N], pos, sum[N];
 int n, k, p, ans;
 int main()

@@ -1,5 +1,8 @@
 #include <cstdio>
-struct NOI
+#include <iostream>
+using namespace std;
+
+struct laoba
 {
     int tm, ct;
 } a[300005];
@@ -8,13 +11,13 @@ int n, k, tot, time, i, j, tmp;
 int ans, head;
 int main()
 {
-    scanf("%d", &n);
+    cin >> n;
     for (i = 1; i <= n; i++)
     {
-        scanf("%d%d", &time, &k);
+        cin >> time >> k;
         while (k--)
         {
-            scanf("%d", &tmp);
+            cin >> tmp;
             a[++tot].tm = time;
             a[tot].ct = tmp;
             if (b[tmp] == 0)
@@ -29,7 +32,7 @@ int main()
                 ans--;
             head = head + 1;
         }
-        printf("%d\n", ans);
+        cout << ans << endl;
     }
     return 0;
 }
